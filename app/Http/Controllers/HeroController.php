@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
+use App\Hero;
+use App\Image;
 class HeroController extends Controller
 {
     //
@@ -18,5 +20,15 @@ class HeroController extends Controller
         $view = view('hero/show');
         $view->hero = $hero;
         return $view;
+    }
+
+    public function index()
+    {
+        $result = Hero::orderBy('name', 'ASC')->get();
+        $view = View('hero/index');
+        $view->questions = $result;
+        return $view;
+
+        
     }
 }
