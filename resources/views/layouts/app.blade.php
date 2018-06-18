@@ -12,7 +12,7 @@
 <body>
 
     <nav class="menu">
-        <a href="#">Home</a>
+        <a href="http://home/bootcamp%20day%201/spring2018-week9-test/public/#/homepage">Home</a>
         @guest
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>
